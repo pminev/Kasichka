@@ -1,0 +1,13 @@
+To use the templates first you need to create a project.
+Project is created by using following command:
+expo init <Project_name>
+
+Now you can choose type of template to use.
+
+To start the project enter the project folder:
+
+cd <Project_name>
+
+and run:
+
+npm start # you can also use: expo start
