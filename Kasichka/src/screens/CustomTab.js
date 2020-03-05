@@ -10,7 +10,7 @@ export default class CustomTab extends React.Component {
             <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
             <OptionButton
             icon="md-compass"
-            label="Go to google from CustomTab class!"
+            label="Go to google from CustomTakkb class!"
             onPress={() => WebBrowser.openBrowserAsync('https://www.google.com')}
             />
 
