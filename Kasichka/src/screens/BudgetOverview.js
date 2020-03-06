@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, StatusBar } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
 
@@ -14,6 +14,7 @@ export default class BudgetOverview extends React.Component {
     render() {
         return (
             <View style={styles.container}>
+               <StatusBar backgroundColor="blue" barStyle="dark-content"/>
             <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
               <View style={styles.welcomeContainer}>
                 <Image
