@@ -5,7 +5,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import CustomTab from '../screens/CustomTab';
-import BudgetOverview from '../screens/BudgetOverview' 
+import BudgetOverview from '../screens/BudgetOverview'
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = ScreenNames.Overview;
