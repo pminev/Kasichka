@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, StatusBar } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
 
 import { MonoText } from '../components/StyledText';
+import { Ionicons } from '@expo/vector-icons';
 import BudgetTable from '../components/BudgetTable'
 
 export default class BudgetOverview extends React.Component {
@@ -26,13 +27,25 @@ export default class BudgetOverview extends React.Component {
               </View>
 
               <View style={styles.buttonsContainter}>
-                <Text style={styles.buttonsText}>
-                  Buttons for adding expenses and incomes
-                </Text>
+                <TouchableOpacity style={styles.buttonLeft}>
+                  <Ionicons style={styles.buttonIcon} name='ios-add' size={55} color="rgba(0,0,0,0.35)" />
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.buttonRight}>
+                  <Ionicons style={styles.buttonIcon} name='ios-remove' size={55} color="rgba(0,0,0,0.35)" iconStyle={styles.text}/>
+                </TouchableOpacity>
               </View>
           </View>
         );
     }
+}
+
+/*================ Styles =================*/
+const buttonBase = {
+  width:75,
+  height: 75,
+  backgroundColor: 'rgb(255,255,255)',
+  borderRadius: 200,
+  justifyContent: 'center',
 }
 
 const styles = StyleSheet.create({
@@ -58,10 +71,25 @@ const styles = StyleSheet.create({
     buttonsContainter: {
       marginTop: 50,
       padding: 20,
-      backgroundColor: 'rgb(199,233,17)'
+      backgroundColor: 'rgb(199,233,17)',
+      flex: 1,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
     },
-    buttonsText: {
-      fontSize: 18,
-      textAlign: 'center'
+    buttonLeft: {
+      width:75,
+      height: 75,
+      borderRadius: 200,
+      backgroundColor: 'rgb(255,255,255)',
+      justifyContent: 'center',
+      left: 80,
+    },
+    buttonRight: {
+      ...buttonBase,
+      right: 80,
+    },
+    buttonIcon: {
+      top: 3,
+      alignSelf: 'center',
     }
   });

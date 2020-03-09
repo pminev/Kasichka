@@ -58,7 +58,6 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         backgroundColor: 'rgb(111, 255, 217)',
         padding: 15,
-        //marginVertical: 8,
       },
       headerView: {
         backgroundColor: 'rgb(111, 255, 217)',
