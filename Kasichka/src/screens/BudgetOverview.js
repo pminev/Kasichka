@@ -6,6 +6,7 @@ import * as WebBrowser from 'expo-web-browser';
 import { MonoText } from '../components/StyledText';
 import { Ionicons } from '@expo/vector-icons';
 import BudgetTable from '../components/BudgetTable'
+import Counter from '../TestRedux/Counter'
 
 export default class BudgetOverview extends React.Component {
     constructor(props) {
@@ -26,6 +27,7 @@ export default class BudgetOverview extends React.Component {
                 <BudgetTable style={styles.budgetTable} />
               </View>
 
+              <Counter></Counter>
               <View style={styles.buttonsContainter}>
                 <TouchableOpacity style={styles.buttonLeft}>
                   <Ionicons style={styles.buttonIcon} name='ios-add' size={55} color="rgba(0,0,0,0.35)" />
